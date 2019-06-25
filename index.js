@@ -2,8 +2,8 @@ const { app, BrowserWindow } = require("electron")
 let win;
 
 function createWindow() {
-  win = new BrowserWindow({ width: 600, height: 300});
-  win.loadURL(`file://${__dirname}/ovto/index.html`);
+  win = new BrowserWindow({ width: 1300, height: 780});
+  win.loadURL(`file://${__dirname}/dist/index.html`);
   win.on("closed", () => {win = null});
 }
 
