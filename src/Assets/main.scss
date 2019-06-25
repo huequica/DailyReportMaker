@@ -1,0 +1,22 @@
+@import "~bulma/bulma";
+
+$left-Color : #e5e5ff;
+$right-Color : #ffeaea;
+$box-Color : #f1f1f1;
+
+div.columns {
+  min-height: 100vh;
+  margin: 0;
+
+  div#col-left {
+    background-color: $left-Color;
+  }
+  div#col-right {
+    background-color: $right-Color;
+    text-align: center;
+  }
+}
+div.box {
+  background-color: $box-Color;
+  text-align: left;
+}
