@@ -44,15 +44,10 @@ class DailyReport_Template{
 let report_instance = new DailyReport_Template();
 report_instance.reload_preview();
 
-// function input_today_action(text){
-//   console.log(text);
-//   report_instance.today_action = text;
-//   report_instance.reload_preview();
-// }
-
 var Element_today_action = document.querySelector("#input_today_action");
 console.log(Element_today_action);
 Element_today_action.addEventListener('input', () => {
   // console.log(Element_today_action.value);
-
+  report_instance.today_action = Element_today_action.value;
+  report_instance.reload_preview();
 });
