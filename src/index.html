@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Hello World</title>
+  <title>日報メーカー Daily Report Maker</title>
   <script type='text/javascript' src='app.js'></script>
 </head>
 
@@ -12,40 +12,60 @@
   <div class="columns">
     <div class="column" id="col-left">
       <h2 class="subtitle is-3">Editor</h2>
+
+      <h2 class="subtitle is-5">本日の行動</h2>
+      <input type="text" id="input_today_action" class="input is-rounded">
+
+      <h2 class="subtitle is-5">明日の行動</h2>
+      <input type="text" id="input_tomorrow_action" class="input is-rounded">
+
+
+      <h2 class="subtitle is-5">未消化タスク</h2>
+      <input type="text" id="input_notEnded-task" class="input is-rounded">
+
+
+      <h2 class="subtitle is-5">所感</h2>
+      <textarea type="text" id="input_Feeling" class="textarea"></textarea>
+
+
+      <h2 class="subtitle is-5">よかったこと</h2>
+      <input type="text" id="input_today_action" class="input is-rounded">
+      <!-- よかったことを追加するスペース -->
+      <div id="happys-space"></div>
     </div>
     <div class="column" id="col-right">
       <h2 class="subtitle is-3">Preview</h2>
-        <div class="box">
-          <pre>
+      <div class="box">
+        <pre>
 
           【日報】6/25 小野晴海
           各位
-          
+
           お疲れ様です。小野晴海です。
-          
+
           6月25日の業務報告を致します。
-          
+
           ◇日報◇
-          
+
           ■本日の行動■
-          
-          
+
+
           ■明日の行動■
-          
-          
+
+
           ■未消化タスク■
-          
-          
+
+
           ■所感■
-          
-          
+
+
           ■よかったこと■
-          
+
           ・
           ・
           ・
         </pre>
-        </div>
+      </div>
     </div>
   </div>
 </body>

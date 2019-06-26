@@ -10,6 +10,15 @@ div.columns {
 
   div#col-left {
     background-color: $left-Color;
+
+    h2.subtitle {
+      margin: 0;
+    }
+
+    input, textarea {
+      margin-bottom: 2vh;
+    }
+
   }
   div#col-right {
     background-color: $right-Color;
