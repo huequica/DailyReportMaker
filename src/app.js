@@ -7,32 +7,34 @@ class DailyReport_Template{
     this.notEnded_task = '';
     this.feeling = '';
     this.happy_things = [];
+
+    this.date = new Date();
     }
   
   reload_preview(){
     let base_string = `
-  【日報】6/25 小野晴海
-  各位
+【日報】${this.date.getMonth() + 1}/${this.date.getDate()} 小野晴海
+各位
 
-  お疲れ様です。小野晴海です。
+お疲れ様です。小野晴海です。
 
-  6月25日の業務報告を致します。
+${this.date.getMonth() + 1}月${this.date.getDate()}日の業務報告を致します。
 
-  ◇日報◇
+◇日報◇
 
-  ■本日の行動■
-  ${this.today_action}
+■本日の行動■
+${this.today_action}
 
-  ■明日の行動■
-  ${this.tomorrow_action}
+■明日の行動■
+${this.tomorrow_action}
 
-  ■未消化タスク■
-  ${this.notEnded_task}
+■未消化タスク■
+${this.notEnded_task}
 
-  ■所感■
-  ${this.feeling}
+■所感■
+${this.feeling}
 
-  ■よかったこと■
+■よかったこと■
   
   `;
   let Preview = document.getElementById("preview");
