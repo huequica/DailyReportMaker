@@ -4,6 +4,13 @@ $left-Color : #e5e5ff;
 $right-Color : #ffeaea;
 $box-Color : #f1f1f1;
 
+.disable-select {
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+
 div.columns {
   min-height: 100vh;
   margin: 0;
