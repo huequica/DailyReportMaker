@@ -44,10 +44,33 @@ class DailyReport_Template{
 let report_instance = new DailyReport_Template();
 report_instance.reload_preview();
 
-var Element_today_action = document.querySelector("#input_today_action");
-console.log(Element_today_action);
+// 本日のの行動
+let Element_today_action = document.querySelector("#input_today_action");
 Element_today_action.addEventListener('input', () => {
-  // console.log(Element_today_action.value);
   report_instance.today_action = Element_today_action.value;
   report_instance.reload_preview();
 });
+
+
+// 明日の行動
+let Element_tomorrow_action = document.querySelector('input#input_tomorrow_action');
+Element_tomorrow_action.addEventListener('input', () => {
+  report_instance.tomorrow_action = Element_tomorrow_action.value;
+  report_instance.reload_preview();
+});
+
+let Element_notEndedTask = document.querySelector('input#input_notEnded-task');
+Element_notEndedTask.addEventListener('input', () => {
+  report_instance.notEnded_task = Element_notEndedTask.value;
+  report_instance.reload_preview();
+});
+
+
+// 所感
+let Element_Feeling = document.querySelector('textarea#input_Feeling');
+Element_Feeling.addEventListener('input', () => {
+  report_instance.feeling = Element_Feeling.value;
+  report_instance.reload_preview();
+});
+
+
