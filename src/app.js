@@ -1,5 +1,13 @@
 import './Assets/main.scss'
 
+// よかったことの追加ボタン
+let Element_add_happy = document.querySelector('#add_happythings');
+Element_add_happy.addEventListener('click', () => {
+  let Element_Happys_Space = document.querySelector('div#happys-space');
+  let Element_add_happy = '<input type="text" class="input is-rounded input_happy_things">';
+  Element_Happys_Space.insertAdjacentHTML('afterbegin', Element_add_happy);
+});
+
 class DailyReport_Template{
   constructor() {
     this.today_action = '';
@@ -46,7 +54,7 @@ ${this.feeling}
 let report_instance = new DailyReport_Template();
 report_instance.reload_preview();
 
-// 本日のの行動
+// 本日の行動
 let Element_today_action = document.querySelector("#input_today_action");
 Element_today_action.addEventListener('input', () => {
   report_instance.today_action = Element_today_action.value;
