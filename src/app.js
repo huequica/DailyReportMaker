@@ -6,7 +6,7 @@ class DailyReport_Template{
     this.tomorrow_action = '';
     this.notEnded_task = '';
     this.feeling = '';
-    this.happy_things = [];
+    this.happy_things = [''];
 
     this.date = new Date();
     }
@@ -35,7 +35,7 @@ ${this.notEnded_task}
 ${this.feeling}
 
 ■よかったこと■
-  
+
   `;
   let Preview = document.getElementById("preview");
   // console.log(Preview);
@@ -74,5 +74,4 @@ Element_Feeling.addEventListener('input', () => {
   report_instance.feeling = Element_Feeling.value;
   report_instance.reload_preview();
 });
-
 
