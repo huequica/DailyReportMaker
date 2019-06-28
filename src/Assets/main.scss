@@ -9,30 +9,38 @@ $box-Color : #f1f1f1;
   -webkit-user-select: none;
   -ms-user-select: none;
 }
+html {
+overflow: hidden;
+height: 100%;
 
+  div.columns {
+    margin: 0 !important;
+    height: 100%;
+    overflow: hidden;
 
-div.columns {
-  min-height: 100vh;
-  margin: 0;
+    div#col-left {
+      height: 100vh;
+      overflow: auto;
+      background-color: $left-Color;
 
-  div#col-left {
-    background-color: $left-Color;
+      h2.subtitle {
+        margin: 0;
+      }
 
-    h2.subtitle {
-      margin: 0;
+      input, textarea {
+        margin-bottom: 2vh;
+      }
+
     }
-
-    input, textarea {
-      margin-bottom: 2vh;
+    div#col-right {
+      background-color: $right-Color;
+      text-align: center;
+      overflow: auto;
     }
-
   }
-  div#col-right {
-    background-color: $right-Color;
-    text-align: center;
+  div.box {
+    background-color: $box-Color;
+    text-align: left;
   }
-}
-div.box {
-  background-color: $box-Color;
-  text-align: left;
+  
 }
