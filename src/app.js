@@ -1,20 +1,12 @@
 import './Assets/main.scss'
 
-// よかったことの追加ボタン
-let Element_add_happy = document.querySelector('#add_happythings');
-Element_add_happy.addEventListener('click', () => {
-  let Element_Happys_Space = document.querySelector('div#happys-space');
-  let Element_add_happy = '<input type="text" class="input is-rounded input_happy_things">';
-  Element_Happys_Space.insertAdjacentHTML('afterbegin', Element_add_happy);
-});
-
 class DailyReport_Template{
   constructor() {
     this.today_action = '';
     this.tomorrow_action = '';
     this.notEnded_task = '';
     this.feeling = '';
-    this.happy_things = [''];
+    this.happy_things = '';
 
     this.date = new Date();
     }
