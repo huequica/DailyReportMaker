@@ -110,8 +110,16 @@ document.querySelector('button#modal_delete').addEventListener('click', () => {
 
 // モーダルの設定を保存する
 document.querySelector('button#modal_save').addEventListener('click', () => {
-  report_instance.author = document.querySelector('input#input_author').value;
-  localStorage["Author"] = document.querySelector('input#input_author').value;
-  mordal_close();
-  report_instance.reload_preview();
+  let Element_Author = document.querySelector('input#input_author');
+  
+  // 空白だった場合はバリデートする(赤枠にするだけ)
+  if(Element_Author.value == ''){
+    Element_Author.classList.add('is-danger');
+  }
+  else {
+    report_instance.author = Element_Author.value;
+    localStorage["Author"] = Element_Author.value;
+    mordal_close();
+    report_instance.reload_preview();
+  }
 });
