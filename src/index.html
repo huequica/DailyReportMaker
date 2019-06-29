@@ -8,6 +8,26 @@
 
 <body>
 
+  <div class="modal" id='modal'>
+    <div class="modal-background"></div>
+    <div class="modal-card">
+
+      <header class="modal-card-head">
+        <p class="modal-card-title">Setting</p>
+        <button class="delete" aria-label="close" id="modal_delete"></button>
+      </header>
+
+      <section class="modal-card-body">
+        <!-- Content ... -->
+      </section>
+
+      <footer class="modal-card-foot">
+        <button class="button is-success">Save changes</button>
+      </footer>
+
+    </div>
+  </div>
+
   <div class="columns">
     <div class="column" id="col-left">
       <h2 class="subtitle is-3 disable-select">Editor</h2>
@@ -29,7 +49,7 @@
 
       <h2 class="subtitle is-5 disable-select">よかったこと</h2>
       <textarea type="text" class="textarea" id="input_happys"></textarea>
-            
+      <button class="button is-danger is-rounded" id="mordal_open">Setting</button>
     </div>
     <div class="column" id="col-right">
       <h2 class="subtitle is-3 disable-select">Preview</h2>

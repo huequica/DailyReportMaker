@@ -81,3 +81,22 @@ Element_happys.addEventListener('input', () => {
   report_instance.happy_things = Element_happys.value;
   report_instance.reload_preview();
 });
+
+// モーダルの表示
+document.querySelector('button#mordal_open').addEventListener('click', () => {
+  document.querySelector('div#modal').classList.toggle('is-active');
+})
+
+// モーダルを消す部分
+function mordal_close() {
+  document.querySelector('div#modal').classList.toggle('is-active');
+}
+
+document.querySelector('div.modal-background').addEventListener('click', () => {
+  mordal_close();
+});
+
+document.querySelector('button#modal_delete').addEventListener('click', () => {
+  mordal_close();
+});
+
