@@ -9,14 +9,16 @@ class DailyReport_Template{
     this.happy_things = '';
 
     this.date = new Date();
+
+    this.author = "<span style='color: #ff6347'>名前を設定してください</span>";
     }
   
   reload_preview(){
     let base_string = `
-【日報】${this.date.getMonth() + 1}/${this.date.getDate()} 小野晴海
+【日報】${this.date.getMonth() + 1}/${this.date.getDate()} ${this.author}
 各位
 
-お疲れ様です。小野晴海です。
+お疲れ様です。${this.author}です。
 
 ${this.date.getMonth() + 1}月${this.date.getDate()}日の業務報告を致します。
 
@@ -39,7 +41,7 @@ ${this.happy_things}
 `;
   let Preview = document.getElementById("preview");
   // console.log(Preview);
-  Preview.innerText = base_string;
+  Preview.innerHTML = base_string;
   }
 }
 
