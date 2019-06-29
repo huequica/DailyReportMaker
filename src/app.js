@@ -9,6 +9,8 @@ class DailyReport_Template{
     this.happy_things = '';
 
     this.date = new Date();
+
+    // ローカルストレージに値が保存されてるか問い合わせ(`void 0`は常に`undefined`を返すことを利用している)
     if(localStorage["Author"] === void 0){
       this.author = "<span style='color: #ff6347'>名前を設定してください</span>";
     }
