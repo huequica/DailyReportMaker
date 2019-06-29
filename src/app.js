@@ -102,3 +102,9 @@ document.querySelector('button#modal_delete').addEventListener('click', () => {
   mordal_close();
 });
 
+// モーダルの設定を保存する
+document.querySelector('button#modal_save').addEventListener('click', () => {
+  report_instance.author = document.querySelector('input#input_author').value;
+  mordal_close();
+  report_instance.reload_preview();
+});
