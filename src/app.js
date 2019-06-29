@@ -35,8 +35,8 @@ ${this.notEnded_task}
 ${this.feeling}
 
 ■よかったこと■
-
-  `;
+${this.happy_things}
+`;
   let Preview = document.getElementById("preview");
   // console.log(Preview);
   Preview.innerText = base_string;
@@ -75,3 +75,9 @@ Element_Feeling.addEventListener('input', () => {
   report_instance.reload_preview();
 });
 
+//　よかったこと
+let Element_happys = document.querySelector('textarea#input_happys');
+Element_happys.addEventListener('input', () => {
+  report_instance.happy_things = Element_happys.value;
+  report_instance.reload_preview();
+});
