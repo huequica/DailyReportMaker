@@ -9,9 +9,13 @@ class DailyReport_Template{
     this.happy_things = '';
 
     this.date = new Date();
-
-    this.author = "<span style='color: #ff6347'>名前を設定してください</span>";
+    if(localStorage["Author"] === void 0){
+      this.author = "<span style='color: #ff6347'>名前を設定してください</span>";
     }
+    else {
+      this.author = localStorage["Author"];
+    }
+  }
   
   reload_preview(){
     let base_string = `
@@ -105,6 +109,7 @@ document.querySelector('button#modal_delete').addEventListener('click', () => {
 // モーダルの設定を保存する
 document.querySelector('button#modal_save').addEventListener('click', () => {
   report_instance.author = document.querySelector('input#input_author').value;
+  localStorage["Author"] = document.querySelector('input#input_author').value;
   mordal_close();
   report_instance.reload_preview();
 });
