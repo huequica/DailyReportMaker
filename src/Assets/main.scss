@@ -36,8 +36,11 @@ height: 100%;
 
     }
     div#col-right {
+      h2.subtitle.is-3.disable-select {
+        text-align: center;
+      }
+
       background-color: $right-Color;
-      text-align: center;
       height: 100vh;
       overflow: auto;
 
@@ -47,9 +50,7 @@ height: 100%;
         pre{
           font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
         }
-        
       }
-    
     }
   }
   
