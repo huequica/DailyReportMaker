@@ -21,8 +21,7 @@ class DailyReport_Template{
   }
   
   reload_preview(){
-    let base_string = `
-【日報】${this.date.getMonth() + 1}/${this.date.getDate()} ${this.author}
+    let base_string = `【日報】${this.date.getMonth() + 1}/${this.date.getDate()} ${this.author}
 各位
 
 お疲れ様です。${this.author}です。
@@ -135,7 +134,18 @@ function sleep(time) {
 }
 
 document.querySelector('button#button_copy').addEventListener('click', async () => {
+  let Element_preview = document.querySelector('pre#preview');
+  let selection = window.getSelection();
+  let range = document.createRange();
 
+  // ここからコピーする部分
+  range.selectNodeContents(Element_preview);
+  selection.removeAllRanges();
+  selection.addRange(range);
+  document.execCommand('copy');
+  selection.removeAllRanges();
+
+  // 通知を出す
   let Element_message = document.querySelector('article.message.is-success');
   Element_message.classList.remove('disable');
   Element_message.classList.add('enable');
