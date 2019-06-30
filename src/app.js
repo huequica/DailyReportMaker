@@ -1,4 +1,5 @@
 import './Assets/main.scss'
+import 'babel-polyfill';
 
 class DailyReport_Template{
   constructor() {
@@ -122,4 +123,24 @@ document.querySelector('button#modal_save').addEventListener('click', () => {
     mordal_close();
     report_instance.reload_preview();
   }
+});
+
+// コピーボタン
+function sleep(time) {
+  return new Promise((resolve, reject) => {
+      setTimeout(() => {
+          resolve();
+      }, time);
+  });
+}
+
+document.querySelector('button#button_copy').addEventListener('click', async () => {
+
+  let Element_message = document.querySelector('article.message.is-success');
+  Element_message.classList.remove('disable');
+  Element_message.classList.add('enable');
+  // console.log('sleep start');
+  await sleep(3000);
+  Element_message.classList.remove('enable');
+  Element_message.classList.add('disable');
 });
