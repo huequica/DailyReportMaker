@@ -44,4 +44,9 @@ height: 100%;
     text-align: left;
   }
   
+  article.message.is-success {
+    position: absolute;
+    right: 0;
+    bottom: 2rem;
+  }
 }
