@@ -16,6 +16,15 @@ html {
 overflow: hidden;
 height: 100%;
 
+
+  div.modal.is-active#modal_Template {
+    ul {
+      list-style: disc;
+      list-style-type: disc;
+      margin-left: 2rem;
+    }
+  }
+
   div.columns {
     margin: 0 !important;
     height: 100%;

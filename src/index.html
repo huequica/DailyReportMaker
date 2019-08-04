@@ -35,12 +35,42 @@
     </div>
   </div>
 
+  <div class="modal is-active" id='modal_Template'>
+    <div class="modal-background"></div>
+    <div class="modal-card">
+
+      <header class="modal-card-head">
+        <p class="modal-card-title disable-select">Template Setting</p>
+        <button class="delete" aria-label="close" id="modal_delete"></button>
+      </header>
+
+      <section class="modal-card-body">
+        <span class="subtitle is-4 disable-select">テンプレート</span><br>
+
+        <ul>
+          <li><code>(name)</code>  => 名前</li>
+          <li><code>(month)</code> => 月</li>
+          <li><code>(day)</code>   => 日</li>
+        </ul>
+
+        <div class="column">
+          <textarea class="textarea is-rounded" id="textarea_template">
+        </div>
+      </section>
+
+      <footer class="modal-card-foot">
+        <button class="button is-success" id="modal_save">Save</button>
+      </footer>
+
+    </div>
+  </div>
+
   <article class="message is-success">
     <div class="message-body">
       コピーしました。
     </div>
   </article>
-  
+
   <div class="columns">
     <div class="column" id="col-left">
       <h2 class="subtitle is-3 disable-select">Editor</h2>
