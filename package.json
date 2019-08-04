@@ -8,7 +8,6 @@
     "electron": "electron .",
     "build-for-electron": "parcel build -d dist ./src/index.html --public-url ./",
     "dev:server": "npx parcel src/index.html --open",
-
     "both-electron-pack": "electron-packager . DailyReportMaker --platform=darwin,win32 --arch=x64 --overwrite",
     "win32-electron-pack": "electron-packager . DailyReportMaker --platform=win32 --arch=x64 --overwrite",
     "darwin-electron-pack": "electron-packager . DailyReportMaker --platform=darwin --arch=x64 --overwrite"
@@ -20,13 +19,13 @@
     "babel": "^6.23.0",
     "babel-polyfill": "^6.26.0",
     "bulma": "^0.7.5",
-    "electron": "^5.0.4",
-    "electron-packager": "^14.0.0",
+    "electron": "^5.0.6",
+    "electron-packager": "^14.0.1",
     "parcel": "^1.12.3"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
-    "sass": "^1.22.0"
+    "sass": "^1.22.4"
   }
 }
