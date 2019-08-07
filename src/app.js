@@ -42,7 +42,7 @@ class DailyReport_Template{
   (feeling)
 
   ■よかったこと■
-  (happy)`
+  (happys)`
     }
     else {
       this.author = localStorage["Template"];
@@ -53,6 +53,16 @@ class DailyReport_Template{
 
   reload_preview(){
     let base_string = this.template;
+
+    base_string = base_string.replace(/\(month\)/g,   this.date.getMonth() + 1)
+                             .replace(/\(day\)/g,     this.date.getDate())
+                             .replace(/\(name\)/g,    this.author)
+                             .replace(/\(today\)/g,   this.today_action)
+                             .replace(/\(next\)/g,    this.tomorrow_action)
+                             .replace(/\(task\)/g,    this.notEnded_task)
+                             .replace(/\(feeling\)/g, this.feeling)
+                             .replace(/\(happys\)/g,  this.happy_things);
+
     let Preview = document.getElementById("preview");
     // console.log(Preview);
     Preview.innerHTML = base_string;
