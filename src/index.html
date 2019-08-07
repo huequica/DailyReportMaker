@@ -26,36 +26,22 @@
             <input class="input is-rounded" id="input_author">
           </div>
         </div>
-      </section>
 
-      <footer class="modal-card-foot">
-        <button class="button is-success" id="modal_save">Save</button>
-      </footer>
+        <hr />
 
-    </div>
-  </div>
-
-  <div class="modal is-active" id='modal_Template'>
-    <div class="modal-background"></div>
-    <div class="modal-card">
-
-      <header class="modal-card-head">
-        <p class="modal-card-title disable-select">Template Setting</p>
-        <button class="delete" aria-label="close" id="modal_delete"></button>
-      </header>
-
-      <section class="modal-card-body">
         <span class="subtitle is-4 disable-select">テンプレート</span><br>
-
         <ul>
           <li><code>(name)</code>  => 名前</li>
           <li><code>(month)</code> => 月</li>
           <li><code>(day)</code>   => 日</li>
-        </ul>
+          <li><code>(today)</code>   => 今日の行動</li>
+          <li><code>(next)</code>   =>  明日の行動</li>
+          <li><code>(task)</code>   => 未消化タスク</li>
+          <li><code>(feeling)</code>   => 所感</li>
+          <li><code>(happys)</code>   => 良かったこと</li>
 
-        <div class="column">
-          <textarea class="textarea is-rounded" id="textarea_template">
-        </div>
+        </ul>
+        <textarea class="textarea is-rounded" id="textarea_template"></textarea>
       </section>
 
       <footer class="modal-card-foot">
@@ -64,6 +50,7 @@
 
     </div>
   </div>
+
 
   <article class="message is-success">
     <div class="message-body">
@@ -92,8 +79,7 @@
 
       <h2 class="subtitle is-5 disable-select">よかったこと</h2>
       <textarea type="text" class="textarea" id="input_happys"></textarea>
-      <button class="button is-danger is-rounded" id="mordal_open">名前の設定</button>
-      <button class="button is-danger is-rounded" id="template_mordal_open">テンプレートの設定</button>
+      <button class="button is-danger is-rounded" id="mordal_open">設定</button>
     </div>
     <div class="column" id="col-right">
       <h2 class="subtitle is-3 disable-select">Preview</h2>
