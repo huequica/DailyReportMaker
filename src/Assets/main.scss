@@ -17,12 +17,16 @@ overflow: hidden;
 height: 100%;
 
 
-  div.modal.is-active#modal_Template {
+  div.modal.is-active {
     ul {
       list-style: disc;
       list-style-type: disc;
       margin-left: 2rem;
     }
+    textarea#textarea_template {
+      height: 500px;
+    }
+
   }
 
   div.columns {
@@ -62,7 +66,7 @@ height: 100%;
       }
     }
   }
-  
+
   // `div.columns`の外に存在するため外に放り込む
   article.message.is-success {
     position: absolute;
