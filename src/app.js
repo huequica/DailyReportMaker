@@ -18,36 +18,44 @@ class DailyReport_Template{
     else {
       this.author = localStorage["Author"];
     }
+
+    if(localStorage["Template"] === void 0){
+      this.template = `【日報】(month)/(day) (name)
+  各位
+
+  お疲れ様です。(name)です。
+
+  (month)月(day)日の業務報告を致します。
+
+  ◇日報◇
+
+  ■本日の行動■
+  (today)
+
+  ■明日の行動■
+  (next)
+
+  ■未消化タスク■
+  (task)
+
+  ■所感■
+  (feeling)
+
+  ■よかったこと■
+  (happy)`
+    }
+    else {
+      this.author = localStorage["Template"];
+    }
+
+
   }
-  
+
   reload_preview(){
-    let base_string = `【日報】${this.date.getMonth() + 1}/${this.date.getDate()} ${this.author}
-各位
-
-お疲れ様です。${this.author}です。
-
-${this.date.getMonth() + 1}月${this.date.getDate()}日の業務報告を致します。
-
-◇日報◇
-
-■本日の行動■
-${this.today_action}
-
-■明日の行動■
-${this.tomorrow_action}
-
-■未消化タスク■
-${this.notEnded_task}
-
-■所感■
-${this.feeling}
-
-■よかったこと■
-${this.happy_things}
-`;
-  let Preview = document.getElementById("preview");
-  // console.log(Preview);
-  Preview.innerHTML = base_string;
+    let base_string = this.template;
+    let Preview = document.getElementById("preview");
+    // console.log(Preview);
+    Preview.innerHTML = base_string;
   }
 }
 
@@ -93,25 +101,27 @@ Element_happys.addEventListener('input', () => {
 // モーダルの表示
 document.querySelector('button#mordal_open').addEventListener('click', () => {
   document.querySelector('div#modal').classList.toggle('is-active');
-})
+});
 
 // モーダルを消す部分
-function mordal_close() {
-  document.querySelector('div#modal').classList.toggle('is-active');
+function mordal_close(query) {
+  document.querySelector(query).classList.toggle('is-active');
 }
 
 document.querySelector('div.modal-background').addEventListener('click', () => {
-  mordal_close();
+  mordal_close('div#modal');
 });
 
 document.querySelector('button#modal_delete').addEventListener('click', () => {
-  mordal_close();
+  mordal_close('div#modal');
 });
+
+
 
 // モーダルの設定を保存する
 document.querySelector('button#modal_save').addEventListener('click', () => {
   let Element_Author = document.querySelector('input#input_author');
-  
+
   // 空白だった場合はバリデートする(赤枠にするだけ)
   if(Element_Author.value == ''){
     Element_Author.classList.add('is-danger');
@@ -119,7 +129,7 @@ document.querySelector('button#modal_save').addEventListener('click', () => {
   else {
     report_instance.author = Element_Author.value;
     localStorage["Author"] = Element_Author.value;
-    mordal_close();
+    mordal_close('div#modal');
     report_instance.reload_preview();
   }
 });
