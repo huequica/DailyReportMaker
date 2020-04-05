@@ -15,17 +15,17 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "async": "^3.1.0",
+    "async": "^3.2.0",
     "babel": "^6.23.0",
     "babel-polyfill": "^6.26.0",
-    "bulma": "^0.7.5",
-    "electron": "^5.0.6",
-    "electron-packager": "^14.0.1",
-    "parcel": "^1.12.3"
+    "bulma": "^0.8.1",
+    "electron": "^8.2.0",
+    "electron-packager": "^14.2.1",
+    "parcel": "^1.12.4"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
-    "sass": "^1.22.4"
+    "sass": "^1.26.3"
   }
 }
