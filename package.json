@@ -19,7 +19,7 @@
     "babel": "^6.23.0",
     "babel-polyfill": "^6.26.0",
     "bulma": "^0.8.1",
-    "electron": "^8.2.0",
+    "electron": "^8.2.4",
     "electron-packager": "^14.2.1",
     "parcel": "^1.12.4"
   },
